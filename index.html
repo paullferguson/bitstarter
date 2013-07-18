@@ -5,74 +5,144 @@
     <meta charset="utf-8">
     <title>PF Bitstarter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" 
-          href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
+    <meta content="IE=edge,chrome=1" name="X-UA-Compatible" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic|Open+Sans:400italic,400,700" rel="stylesheet" type="text/css">
+    <link href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css" rel="stylesheet" type="text/css" >
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+
     <style type="text/css">
       body {
-        padding-top: 20px;
-        padding-bottom: 40px;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       }
-      .container {
-        width: 960px;
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
       }
       p.lead {
-        padding-top: 15px;
-      }
-      .navigation, .pitch, .section1, .section2, .faq, .footer {
-        padding: 10px 0px 10px 0px;
-      }
-      .video, .thermometer, .order, .social {
-        border: 1px dotted;
+        padding-top: 1.5%;
+        font-size: 24px;
         text-align: center;
       }
-      .video {
-        /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
-        height: 124px;
-        line-height: 124px;
+      p {
+        font-size: 18px;
+        line-height: 24px
       }
-      .thermometer, .order, .social {
-        /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
-        height: 40px;
-        line-height: 40px;
+      
+      /* Video */
+      .pitch {
+        padding: 2.5% 0;
       }
-      .row {
-        border: 1px solid;
+      .order {
+        padding: 2% 0;
       }
+      .actions {
+        background: #343434;
+        padding: 3% 0;
+      }
+      .video, .thermometer, .order, .social, .statistics {
+        text-align: center;
+      }
+      .statistics h3,
+      .statistics p {
+        colour: white;
+      }
+
+      /* Marketing */
+      .copy {
+        padding: 2.5% 0;
+        text-align: justify;
+      }
+      .asset {
+        padding: 2.5% 0;
+      }
+      .footer {
+        color: #CCC;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #CCCCFF;
+      }
+
+      /* Media queries - in the right place */
+
+      @media (min-width: 979px) {
+
+        body {
+          padding-top: 60px;
+        }
+        .linediv-l {
+          border-right: 1px solid white;
+        }
+        .linediv-r {
+          border-left: 1px solid white;
+        }
+
+      }
+
+      @media (max-width: 480px) {
+
+        .copy {
+          padding: 2.5% 10%;
+        }
+        .linediv-l {
+          border-bottom: 1px solid white;
+        }
+        .linediv-r {
+          border-top: 1px solid white;
+        }
+
+      } 
+
     </style>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <nav class="row navigation">
-          <div class="span2 logo">
-            Logo
-          </div>
-          <div class="span6 blank">
-            Blank
-          </div>
-          <div class="span4 about">
-            About
-          </div>
-        </nav>
-        <div class="row heading">
-          <div class="span12">
-            <h1>Bitstarter Title</h1>
-          </div>
-        </div> 
-        <div class="row subheading">
-          <div class="span12">
-            <p class="lead">This is my first bitstarter project.</p>
-          </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">PF Bitstarter</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav" role="navigation">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
-      </header>
-      <article role="main">
-        <div class="row pitch">
-          <div class="span6 video">
-            Video
+      </div>
+    </div>
+    <div class="container">
+      <div class="row-fluid heading">
+        <div class="span12">
+          <h1>Kitten Mittens</h1>
+        </div>
+      </div> 
+      <div class="row-fluid subheading">
+        <div class="span12">
+          <p class="lead">Dose your cat make too much noise?</p>
+        </div>
+      </div>
+      <article role="main" class="main">
+        <div class="row-fluid pitch">
+
+          <div class="span5 offset1 video">
+            <iframe width="420" height="315" src="//www.youtube.com/embed/5fP4emqw7O4" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div class="span6">
-            <div class="thermometer">
-              Thermometer
+
+          <div class="span5 actions">
+	    <div class="span8 offset2">
+              <div class="statistics">
+              </div>
             </div>
             <div class="order">
               Order
@@ -80,6 +150,7 @@
             <div class="social">
               Social
             </div>
+	    </div>
           </div>
         </div>
         <div class="row section1">
@@ -105,5 +176,103 @@
       </footer>
     </div>
   </body>
+
+<script>
+/*global jQuery */
+/*jshint multistr:true browser:true */
+/*!
+* FitVids 1.0
+*
+* Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+*
+* Date: Thu Sept 01 18:00:00 2011 -0500
+*/
+
+(function( $ ){
+
+  "use strict";
+
+  $.fn.fitVids = function( options ) {
+    var settings = {
+      customSelector: null
+    };
+
+    if(!document.getElementById('fit-vids-style')) {
+
+      var div = document.createElement('div'),
+          ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
+
+      div.className = 'fit-vids-style';
+      div.id = 'fit-vids-style';
+      div.style.display = 'none';
+      div.innerHTML = '&shy;<style>         \
+        .fluid-width-video-wrapper {        \
+           width: 100%;                     \
+           position: relative;              \
+           padding: 0;                      \
+        }                                   \
+                                            \
+        .fluid-width-video-wrapper iframe,  \
+        .fluid-width-video-wrapper object,  \
+        .fluid-width-video-wrapper embed {  \
+           position: absolute;              \
+           top: 0;                          \
+           left: 0;                         \
+           width: 100%;                     \
+           height: 100%;                    \
+        }                                   \
+      </style>';
+
+      ref.parentNode.insertBefore(div,ref);
+
+    }
+
+    if ( options ) {
+      $.extend( settings, options );
+    }
+
+    return this.each(function(){
+      var selectors = [
+        "iframe[src*='player.vimeo.com']",
+        "iframe[src*='youtube.com']",
+        "iframe[src*='youtube-nocookie.com']",
+        "iframe[src*='kickstarter.com'][src*='video.html']",
+        "object",
+        "embed"
+      ];
+
+      if (settings.customSelector) {
+        selectors.push(settings.customSelector);
+      }
+
+      var $allVideos = $(this).find(selectors.join(','));
+      $allVideos = $allVideos.not("object object"); // SwfObj conflict patch
+
+      $allVideos.each(function(){
+        var $this = $(this);
+        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
+            width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
+            aspectRatio = height / width;
+        if(!$this.attr('id')){
+          var videoID = 'fitvid' + Math.floor(Math.random()*999999);
+          $this.attr('id', videoID);
+        }
+        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+        $this.removeAttr('height').removeAttr('width');
+      });
+    });
+  };
+})( jQuery );
+
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".main").fitVids();
+  });
+
+</script>
+
 </html>
 
